@@ -67,6 +67,7 @@ $(document).ready(function() {
       }
             
       });
+  // Remove everything from the list with a button click event
   $('button').on('click', function(e){
     e.preventDefault();
     var $check_del = $("#Remove-All > input:checkbox").is(':checked');

@@ -44,3 +44,14 @@
 	top: -50px;
 }
 
+#adding_information{
+	display: block;
+	margin: 0, auto;
+}
+
+#adding_information input{
+	position: relative;
+    left: 35%;
+    margin: 22px auto;
+}
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Akeem's To-Do-List BETA</title>
+    <link rel="stylesheet" href="style.css" />
+  <style> 
+    li{
+      list-style-type: none;
+    }
+    input::text{
+      height: 100px;
+    }
+  </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1 id="header">THINGS TO DO</h1>
+
+      <form action = "/post_1" method = "post" name = "form" id = "formlist">   
+          <li class="oneanddun">Step One</li>
+          <input type = "checkbox" class = "check"><input type = "text" class = "boxtext" placeholder = "Describe the chore"><input type = "submit" name = "step one" value = "1" id = "sub">
+          <li class ="oneanddun">Step Two</li>
+          <input type = "checkbox" class = "check"><input type = "text" class = "boxtext" placeholder = "Describe the chore"><input type = "submit" id = "sub" name = 'step two' value = "2">
+          <li class ="oneanddun">Step Three</li>
+          <input type ="checkbox" class = "check"><input type = "text" class = "boxtext" placeholder = "Describe the chore"><input type = "submit" id = "sub" name = "step three" value = "3">
+          <li class ="oneanddun">Step Four</li>
+          <input type = "checkbox" class = "check"><input type = "text" class = "boxtext" placeholder = "Describe the chore"><input type = "submit" id = "sub" name = "step  four" value = "4">
+      </form>
+      <form action = "/post" method = "post" id = "form_2">
+        <div id = "adding_information">
+          <h1>Gotta get some more chores on my "to-do" list(s)!</h1>
+         <input type="checkbox"><input type = "text" id = "adding" placeholder = "Adding to the list"><input type = "submit" id = "submit_more">
+        </div>
+      </form>
+      
+      
+     <!--  <form id="newItemForm">
+        <input type="text" id="itemDescription" placeholder="Add description" />
+        <input type="submit" id="add" value="add task" />
+      </form> -->
+      
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

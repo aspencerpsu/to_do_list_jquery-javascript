@@ -51,7 +51,8 @@ $(document).ready(function() {
     var additem = prompt("Add" + " " + $gettext + " " + "to the list?");
     if ($check == true && additem == 'yes'){
       $("#formlist").append('<li class = "oneanddun">' + $gettext + '</li">');
-      $("#formlist").append('<input type = "checkbox" class = "check">' + '<textarea type = "text" class = "boxtext" placeholder = "Describe the chore">' + '<input type = "submit" id = "sub" value = "%{i}">'.replace('%{i}', i));
+      $("#formlist").append('<input type = "checkbox" class = "check">' + '<textarea type = "text" class = "boxtext" placeholder = "Describe the chore"></textarea>' + '<input type = "submit" id = "sub" value = "%{i}">'.replace('%{i}', i));
+      $("#formlist").append('<br></br>');
       console.log($check);
       $("input:text").filter(":last").val('');
       // keep track of the list items with a counter increment outside the anonymous_function;
@@ -64,10 +65,6 @@ $(document).ready(function() {
       else {
         alert("please choose what to do with this chore");
       }
-                             // Prevent form being submitted
-   //   var text = $('input').val();           // Get value of text input
-   //   $('ul').append('<li>' + text + '</li>');      // Add item to end of the list
-   // $('input').val('');                    // Empty the text input
             
       });
 });

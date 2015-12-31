@@ -31,3 +31,16 @@
 .boxtext{
 	height: 100px;
 }
+
+.check{
+	position: relative;
+    margin-top: 49px;
+    top: -50px;
+}
+
+#sub{
+	position: relative;
+	margin-top: 49px;
+	top: -50px;
+}
+

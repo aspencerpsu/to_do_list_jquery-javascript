@@ -15,7 +15,7 @@ $(document).ready(function() {
         $(this).remove();
         console.log(index_no);
         $('#formlist > input:checkbox:eq('+index_no+')').remove();
-        $('#formlist > input:text:eq('+index_no+')').remove();
+        $('#formlist > textarea:eq('+index_no+')').remove();
         $('#formlist > li:eq('+index_no+')').remove();
       //   var $fcheck = $("input:checkbox");
       //   $fcheck.filter(':first').remove();
@@ -39,35 +39,35 @@ $(document).ready(function() {
 //     $(this).addClass('complete');
 //   });
 
- $("#form_2").on('submit', function(e) {  
-      // bind the submit event handler to the function for the 2nd form (adding section);
-      e.preventDefault()
-    var $lastsubmitre = $("input:submit");
       // create the last submit variable that's clicked to perform the following directions
-     $lastsubmitre.on('click', function(event) {
-      // return a boolean true before adding the chore to the list
-      var $check = $("input:checkbox").is(':checked');
-      // get the text value to add to the list of items
-      var $gettext = $('input:text').filter(":last").val();
-      var additem = prompt("Add" + " " + $gettext + " " + "to the list?");
-      if ($check == true && additem == 'yes'){
-        $("#formlist").append('<li class = "oneanddun">' + $gettext + '</li">');
-        $("#formlist").append('<input type = "checkbox" class = "check">' + '<input type = "text" class = "boxtext" placeholder = "Describe the chore">' + '<input type = "submit" id = "sub">');
-        console.log($check);
-        $("input:text").filter(":last").val('');
-        }      
-      else if ($check == false && additem == 'yes') {
-          alert("you forgot to click the \"check\" button");
-          return; 
-        }
-        else {
-          alert("please choose what to do with this chore");
-        }
+      var i = 5
+ $("#form_2").on('click', 'input:submit:last', function(e) {  
+    // bind the submit event handler to the function for the 2nd form (adding section);
+    e.preventDefault()
+    // return a boolean true before adding the chore to the list
+    var $check = $("input:checkbox").is(':checked');
+    // get the text value to add to the list of items
+    var $gettext = $('input:text').filter(":last").val();
+    var additem = prompt("Add" + " " + $gettext + " " + "to the list?");
+    if ($check == true && additem == 'yes'){
+      $("#formlist").append('<li class = "oneanddun">' + $gettext + '</li">');
+      $("#formlist").append('<input type = "checkbox" class = "check">' + '<textarea type = "text" class = "boxtext" placeholder = "Describe the chore">' + '<input type = "submit" id = "sub" value = "%{i}">'.replace('%{i}', i));
+      console.log($check);
+      $("input:text").filter(":last").val('');
+      // keep track of the list items with a counter increment outside the anonymous_function;
+       i += 1;
+      }    
+    else if ($check == false && additem == 'yes') {
+        alert("you forgot to click the \"check\" button");
+        i; 
+      }
+      else {
+        alert("please choose what to do with this chore");
+      }
                              // Prevent form being submitted
    //   var text = $('input').val();           // Get value of text input
    //   $('ul').append('<li>' + text + '</li>');      // Add item to end of the list
    // $('input').val('');                    // Empty the text input
             
       });
-  });
 });

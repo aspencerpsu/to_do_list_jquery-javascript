@@ -1,3 +1,33 @@
-.complete {
-	background-color: red;
+*{
+	font-family: Inconsolata, sans-serif;
+	font-weight: bold;
+	color: black;
+}
+
+#wrapper {
+	width: 50%;
+	border: 8px dashed black;
+	position: relative;
+	left: 0%;
+	top: 50%;
+	margin: 15% auto;
+	background-color: rgb(236,230,61);
+}
+
+#header{
+	margin: 20px auto;
+	display: block;
+	width: 50%;
+	font-size: 25pt;
+	text-align: center;
+}
+
+#formlist{
+	display: block;
+	margin: 0 auto;
+	width: 400px;
+}
+
+.boxtext{
+	height: 100px;
 }

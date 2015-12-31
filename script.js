@@ -67,4 +67,15 @@ $(document).ready(function() {
       }
             
       });
+  $('button').on('click', function(e){
+    e.preventDefault();
+    var $check_del = $("#Remove-All > input:checkbox").is(':checked');
+    var $clean_up = prompt("Once you delete everything, you cannot go back, continue?")
+    if ($check_del == true && $clean_up == 'yes'){
+      $('#formlist').empty();
+      }
+    else if ($check_del == false){
+        alert('click on the checkbox to remove everything');
+      }
+  });
 });

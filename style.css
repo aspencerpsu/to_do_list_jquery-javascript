@@ -26,16 +26,24 @@
 	display: block;
 	margin: 0 auto;
 	width: 400px;
+	clear: both;
 }
 
 .boxtext{
+	height: 100px;
+	width: 509px;
+}
+
+.original{
+	width: 100px;
 	height: 100px;
 }
 
 .check{
 	position: relative;
-    margin-top: 49px;
-    top: -50px;
+	margin-top: 55px;
+	top: -72px;
+	margin-left: -19px;
 }
 
 #sub{
@@ -54,4 +62,56 @@
     left: 35%;
     margin: 22px auto;
 }
+
+h6 {
+    float: right;
+    padding-right: 20px;
+    margin-top: -7px;
+}
+
+div#Remove-All {
+    padding-left: 30px;
+}
+
+form#form_2 {
+    padding-bottom: 45px;
+}
+
+.tracker{
+	width: 297px;
+    border-radius: 49%;
+    border: 7px double black;
+    box-shadow: 7px 7px 7px #C5C2C2;
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    float: right;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.list-sect{
+	border-top: 8px solid black;
+	border-bottom: 8px solid black;
+	width: 500px;
+	margin-top: 10px;
+	margin-left: -30px;
+	padding-top: 30px;
+}
+
+@media screen and (max-width: 400px){
+
+		#wrapper {
+	    width: 70%;
+	    border: 8px dashed black;
+	    position: relative;
+	    left: 0%;
+	    top: 50%;
+	    margin: 15% auto;
+	    background-color: rgb(236,230,61);
+
+	}
+}
+
 
